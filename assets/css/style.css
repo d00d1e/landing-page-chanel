@@ -43,6 +43,15 @@ img {
   min-width: 100%;
 }
 
+hr {
+  margin: 2rem;
+  color: gray;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /* UTILITIES */
 .btn {
   display: inline-block;
@@ -116,7 +125,7 @@ img {
 /* SECTION A */
 .section-a {
   margin: 0;
-  background: url(../img/flower4-watercolor.png) no-repeat center center/cover;
+  background: url("../img/flower4-watercolor.png") no-repeat center center/cover;
 }
 
 .section-a .container {
@@ -128,13 +137,16 @@ img {
 }
 
 .section-a h1 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   color: var(--primary-color);
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 .section-a p {
   margin: 1rem 0;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
 }
 
 .section-a img {
@@ -148,13 +160,13 @@ img {
 }
 
 .section-a img:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 /* SECTION B */
 .section-b {
   position: relative;
-  background: url("../img/background2.jpg") no-repeat center center/cover;
+  background: url("../img/background3.jpg") no-repeat center center/cover;
   height: 37rem;
   width: 100%;
 }
@@ -196,6 +208,7 @@ img {
 .section-c .gallery img,
 .section-c .gallery a {
   height: 100%;
+  width: 100%;
   line-height: 0;
   object-fit: cover;
 }
@@ -215,19 +228,20 @@ img {
 }
 
 /* footer */
-.section-footer {
+.footer {
   background-color: var(--primary-color);
   color: #fff;
-  padding: 4rem 0;
+  padding: 4rem 0 1.2rem 0;
+  line-height: 1.9;
 }
 
-.section-footer .container {
+.footer .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
 }
 
-.section-footer .logo {
+.footer .logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,21 +251,98 @@ img {
   padding: 4rem 0 4rem 0;
 }
 
-.section-footer h2 {
+.footer h2 {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 100;
   margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
-.section-footer li {
+.footer li {
   color: gray;
   font-size: 0.9rem;
 }
 
-.section-footer h3 {
+.footer h3 {
   margin-bottom: 1rem;
 }
 
-.section-footer .social-media a {
+.footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .social-media a > i {
   color: gray;
+  margin-right: 0.7rem;
+  font-size: 1.2rem;
+}
+
+/* EMAIL FORM */
+.email-form {
+  width: 100%;
+  display: inline-block;
+  background-color: gray;
+  position: relative;
+  line-height: 0;
+  margin-top: 1rem;
+}
+
+.email-form .submit {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .section-a .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section-a .container div:first-child {
+    order: 2;
+    margin: 2rem 0;
+  }
+
+  .section-a .container div:last-child {
+    order: -1;
+    margin: 1rem 0;
+  }
+
+  .section-a img {
+    margin: auto;
+  }
+
+  .section-b-inner h2 {
+    font-size: 3.5rem;
+  }
+
+  .section-b-inner p {
+    font-size: 1.2rem;
+  }
+
+  .section-c .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer .container {
+    grid-template-columns: repeat(2, 2fr);
+    justify-items: center;
+  }
 }
