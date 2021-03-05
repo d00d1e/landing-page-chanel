@@ -3,7 +3,7 @@
   --secondary-color: #1d1b1c;
   --highlight-primary: #bdb4b9;
   --hightlight-secondary: #fbf4b5;
-  --overlay-color: rgba(0, 0, 0, 0.3);
+  --overlay-color: rgba(0, 0, 0, 0.2);
 }
 /* #EFECDC */
 
@@ -19,7 +19,10 @@ body {
   line-height: 1.6;
   color: var(--primary-color);
   font-size: 1.1rem;
-  /* overscroll-behavior-y: none; */
+
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
 }
 
 h1,
@@ -44,7 +47,7 @@ img {
 }
 
 hr {
-  margin: 2rem;
+  margin: 2rem 5rem;
   color: gray;
   border: 0;
   height: 0;
@@ -82,10 +85,15 @@ hr {
 
 /* NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   font-size: 1.1rem;
   padding: 0.3rem 0;
   letter-spacing: 0.1rem;
   border-top: 0.5rem solid var(--primary-color);
+  background-color: white;
+  z-index: 1000;
 }
 
 .container {
@@ -104,6 +112,8 @@ hr {
   letter-spacing: 0.3rem;
   line-height: 2.5rem;
   padding: 0 0 1rem 0;
+  font-weight: bold;
+  width: 50%;
 }
 
 .navbar .nav {
@@ -124,14 +134,13 @@ hr {
 
 /* SECTION A */
 .section-a {
-  margin: 0;
+  margin-top: 8rem;
   background: url("../img/flower4-watercolor.png") no-repeat center center/cover;
 }
 
 .section-a .container {
   display: grid;
   grid-template-columns: 1.3fr 2fr;
-  /* grid-gap: 1rem; */
   align-items: center;
   justify-content: center;
 }
@@ -152,7 +161,7 @@ hr {
 .section-a img {
   width: 100%;
   height: auto;
-
+  margin-top: 4rem;
   -webkit-filter: drop-shadow(5px 5px 0 #fff) drop-shadow(-10px -5px 0 #fff);
   filter: drop-shadow(5px 5px 0 #fff) drop-shadow(-10px -5px 0 #fff);
 
@@ -167,8 +176,18 @@ hr {
 .section-b {
   position: relative;
   background: url("../img/background3.jpg") no-repeat center center/cover;
-  height: 37rem;
+  background-attachment: fixed;
+  height: 35rem;
   width: 100%;
+  box-shadow: inset 1px 1px 10px #fff, inset -1px -1px 10px #fff;
+}
+
+.section-b img {
+  position: absolute;
+  width: 1%;
+  top: 10%;
+  transform: rotate(-8deg);
+  z-index: 1;
 }
 
 .section-b-inner {
@@ -187,16 +206,19 @@ hr {
 .section-b-inner h3 {
   font-size: 2rem;
   text-transform: uppercase;
+  z-index: 100;
 }
 
 .section-b-inner h2 {
   font-size: 5rem;
   margin-top: 1rem;
+  z-index: 100;
 }
 
 .section-b-inner p {
   font-size: 1.5rem;
   margin-top: 1rem;
+  z-index: 100;
 }
 
 /* SECTION C */
@@ -239,6 +261,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  padding-bottom: 8rem;
 }
 
 .footer .logo {
@@ -248,7 +271,7 @@ hr {
   font-size: 2.4rem;
   letter-spacing: 0.3rem;
   line-height: 2.5rem;
-  padding: 4rem 0 4rem 0;
+  padding: 6rem;
 }
 
 .footer h2 {
@@ -338,7 +361,7 @@ hr {
   }
 
   .section-c .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer .container {
