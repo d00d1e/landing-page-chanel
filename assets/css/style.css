@@ -1,3 +1,8 @@
+@font-face {
+  font-family: allura;
+  src: url("../fonts/Allura-Regular.ttf");
+}
+
 :root {
   --primary-color: #000;
   --secondary-color: #1d1b1c;
@@ -97,6 +102,10 @@ hr {
   background-color: var(--overlay-color);
 }
 
+.cursive {
+  font-family: allura;
+}
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -157,12 +166,15 @@ hr {
   grid-template-columns: 1.3fr 2fr;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .section-a h1 {
-  font-size: 2.1rem;
+  position: absolute;
+  transform: translate(-5%, -75%);
+  font-size: 5.8rem;
   color: var(--primary-color);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.2rem;
 }
 
@@ -197,11 +209,12 @@ hr {
   text-shadow: 1px 1px 3px #fff;
 }
 
-.section-b img {
+.signature {
   position: absolute;
   width: 1%;
   top: 10%;
-  transform: rotate(-8deg);
+  /* transform: rotate(-8deg); */
+
   z-index: 1;
 }
 
@@ -366,7 +379,7 @@ hr {
 
   .section-a .container div:first-child {
     order: 2;
-    margin: 2rem 0;
+    margin: 5rem 0 2rem 0;
   }
 
   .section-a .container div:last-child {
@@ -376,6 +389,14 @@ hr {
 
   .section-a img {
     margin: auto;
+  }
+
+  .section-a h1 {
+    font-size: 3.4rem;
+  }
+
+  .section-b-inner {
+    margin: 0 0.5rem;
   }
 
   .section-b-inner h2 {
