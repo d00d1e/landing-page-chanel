@@ -19,15 +19,20 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
 body {
   font-family: "Catamaran", sans-serif;
   line-height: 1.6;
   color: var(--primary-color);
   font-size: 1.1rem;
-
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
 }
 
 h1,
@@ -157,29 +162,26 @@ hr {
 
 /* SECTION A */
 .section-a {
-  margin-top: 8rem;
-  background: url("../img/flower4-watercolor.png") no-repeat center center/cover;
+  padding-top: 8rem;
+  background: url("../img/flower4-watercolor.png") no-repeat center center;
+  background-size: cover;
 }
 
 .section-a .container {
   display: grid;
-  grid-template-columns: 1.3fr 2fr;
+  grid-template-columns: 1.4fr 2fr;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .section-a h1 {
-  position: absolute;
-  transform: translate(-5%, -75%);
-  font-size: 5.8rem;
+  font-size: 4.9rem;
   color: var(--primary-color);
-  /* text-transform: uppercase; */
   letter-spacing: 0.2rem;
 }
 
 .section-a p {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   letter-spacing: 0.1rem;
   font-size: 1rem;
 }
@@ -190,7 +192,6 @@ hr {
   margin-top: 4rem;
   -webkit-filter: drop-shadow(5px 5px 0 #fff) drop-shadow(-10px -5px 0 #fff);
   filter: drop-shadow(5px 5px 0 #fff) drop-shadow(-10px -5px 0 #fff);
-
   transition: 1s all ease;
 }
 
@@ -379,12 +380,12 @@ hr {
 
   .section-a .container div:first-child {
     order: 2;
-    margin: 5rem 0 2rem 0;
+    margin: 2rem 0;
   }
 
   .section-a .container div:last-child {
     order: -1;
-    margin: 1rem 0;
+    margin: 5rem 0;
   }
 
   .section-a img {
@@ -392,7 +393,12 @@ hr {
   }
 
   .section-a h1 {
-    font-size: 3.4rem;
+    font-size: 3.3rem;
+  }
+
+  .section-b {
+    background: url("../img/background3.jpg") no-repeat center center;
+    background-size: cover;
   }
 
   .section-b-inner {
